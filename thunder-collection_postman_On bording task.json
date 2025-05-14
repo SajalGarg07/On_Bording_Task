@@ -1,0 +1,189 @@
+{
+    "info": {
+        "_postman_id": "24dadda9-6bdc-411d-a289-0a2751400c97",
+        "name": "On bording task",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Get Departments",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/departments",
+                    "path": [
+                        "departments"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                }
+            }
+        },
+        {
+            "name": "Post Departments",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:8080/departments/create",
+                    "path": [
+                        "departments",
+                        "create"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"departmentName\": \"new\",\n  \"active\": true\n}"
+                }
+            }
+        },
+        {
+            "name": "Delete Department",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:8080/departments/9",
+                    "path": [
+                        "departments",
+                        "9"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                }
+            }
+        },
+        {
+            "name": "Update Department",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://localhost:8080/departments/update/8",
+                    "path": [
+                        "departments",
+                        "update",
+                        "8"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"departmentName\": \"lumberf\",\n  \"active\": true\n}"
+                }
+            }
+        },
+        {
+            "name": "Get Employees",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/employees",
+                    "path": [
+                        "employees"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                }
+            }
+        },
+        {
+            "name": "Post Employee",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:8080/employees",
+                    "path": [
+                        "employees"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Do\",\n  \"active\": true,\n  \"department\": {\n    \"id\": 1\n  }\n}\n"
+                }
+            }
+        },
+        {
+            "name": "Delete Employee",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:8080/employees/2",
+                    "path": [
+                        "employees",
+                        "2"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                }
+            }
+        },
+        {
+            "name": "update employee",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://localhost:8080/employees/update/1",
+                    "path": [
+                        "employees",
+                        "update",
+                        "1"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"firstName\": \"Alice\",\n  \"lastName\": \"Williams\",\n  \"active\": false,\n  \"department\": {\n    \"id\": 1\n  }\n}\n"
+                }
+            }
+        }
+    ]
+}
